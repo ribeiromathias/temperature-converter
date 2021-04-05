@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <script src="javascript/index_rs.js"></script>
+  <link rel="stylesheet" type="text/css" href="style/main.css" media="screen">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:wght@400;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  
+  <div id="container">
+    <h1>Temperature Converter</h1>
+    <div id="main">
+      <div class="unity">
+        <p>Degree Celsius</p>
+        <input onfocus="clearResult()" type="text" id="celsiusInput" placeholder="Celsius" inputmode="numeric">
+      </div>
+
+      <div class="unity">
+        <p>Degree Fahrenheit</p>
+        <input onfocus="clearResult()" type="text" id="fahrenheitInput" placeholder="Fahrenheit" inputmode="numeric">
+      </div>
+    </div>
+    <button id="btn" onclick="convertion()">Convert</button>
+    <p id="convertionToCelsius"></p>
+    <p id="convertionToFahrenheit"></p>
+    <p id="errorMsg"></p>
+  </div>
+
+  <footer>
+    <p>© Developed by <a target="_blank" href="https://github.com/ribeiromathias">Mathias Ribeiro</a></p>
+  </footer>
+
+</body>
+</html>
