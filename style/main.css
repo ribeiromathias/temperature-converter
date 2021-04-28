@@ -24,15 +24,30 @@ body {
 }
 
 #container .title {
-  height: 20vh;
+  height: 33.333vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 #container #unities {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 30vh;
-  gap: 20px;
+  height: 33.333vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
 }
 
 @media (max-width: 992px) {
@@ -49,6 +64,22 @@ body {
   #container #unities .unity p {
     display: none;
   }
+}
+
+#container .unity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 #container .unity p {
@@ -81,9 +112,23 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  height: 33.333vh;
 }
 
-#container .convertion #btn {
+#container .convertion .button {
+  height: 15.333vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#container .convertion .button #btn {
   padding: 15px 40px;
   border: none;
   border-radius: 30px;
@@ -94,12 +139,12 @@ body {
   letter-spacing: 1px;
 }
 
-#container .convertion #btn:hover {
+#container .convertion .button #btn:hover {
   background-color: #000;
 }
 
 #container .convertion .messages {
-  height: 20vh;
+  height: 18vh;
 }
 
 #container .convertion .messages #errorMsg {
