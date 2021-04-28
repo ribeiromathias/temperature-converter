@@ -1,67 +1,89 @@
-html {
+body {
+  font-family: 'Asap', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-body {
-  font-family: 'Asap', sans-serif;
-  margin: 0;
-  height: auto;
-}
-
 #container {
-  min-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 100px;
-}
-
-h1 {
-  margin-bottom: 100px;
-}
-
-#main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 90vh;
+  width: 100vw;
+}
+
+#container .title {
+  height: 20vh;
+}
+
+#container #unities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30vh;
+  gap: 20px;
 }
 
 @media (max-width: 992px) {
-  #main {
+  #container #unities {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  #main #fahrenheitInput::-webkit-input-placeholder, #main #celsiusInput::-webkit-input-placeholder {
+  #container #unities #fahrenheitInput::-webkit-input-placeholder,
+  #container #unities #celsiusInput::-webkit-input-placeholder {
     color: #808080;
   }
-  #main .unity p {
+  #container #unities .unity p {
     display: none;
   }
 }
 
-#fahrenheitInput::-webkit-input-placeholder, #celsiusInput::-webkit-input-placeholder {
-  color: white;
-}
-
-.unity p {
+#container .unity p {
   font-weight: 600;
 }
 
-input {
+#container .unity input {
   font-size: 30px;
-  margin: 10px;
   padding: 5px;
   text-align: center;
 }
 
-#btn {
-  margin-top: 50px;
+#container .unity #fahrenheitInput::-webkit-input-placeholder,
+#container .unity #celsiusInput::-webkit-input-placeholder {
+  color: white;
+}
+
+#container .convertion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+}
+
+#container .convertion #btn {
   padding: 15px 40px;
   border: none;
   border-radius: 30px;
@@ -72,26 +94,31 @@ input {
   letter-spacing: 1px;
 }
 
-#btn:hover {
+#container .convertion #btn:hover {
   background-color: #000;
 }
 
-#errorMsg {
+#container .convertion .messages {
+  height: 20vh;
+}
+
+#container .convertion .messages #errorMsg {
   color: #ff0000;
   font-weight: 700;
 }
 
-#convertionToCelsius, #convertionToFahrenheit, #errorMsg {
-  margin-top: 44px;
-}
-
 footer {
-  position: fixed;
-  bottom: 0;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f1f1f1;
-  padding: 20px 0;
-  width: 100%;
-  text-align: center;
 }
 
 footer a {

@@ -1,90 +1,92 @@
 @import './variables';
 
-body{
+body {
   font-family: 'Asap', sans-serif;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   margin: 0;
   padding: 0;
 }
 
 #container {
-  margin-top: 100px;
-  @media (max-width: 992px) {
-    margin-top: 75px;
-  }
-  h1{
-    margin-bottom: 75px;
-  }
-}
-
-h1{
-  margin-bottom: 100px;
-}
-
-#main{
   display: flex;
-  @media (max-width: 992px) {
-    flex-direction: column;
-    #fahrenheitInput::-webkit-input-placeholder, #celsiusInput::-webkit-input-placeholder{
-      color: $color-placeholder;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 90vh;
+  width: 100vw;
+  .title {
+    height: 20vh;
+  }
+  #unities {
+    display: flex;
+    height: 30vh;
+    gap: 20px;
+    @media (max-width: 992px) {
+      flex-direction: column;
+      #fahrenheitInput::-webkit-input-placeholder,
+      #celsiusInput::-webkit-input-placeholder {
+        color: $color-placeholder;
+      }
+      .unity {
+        p {
+          display: none;
+        }
+      }
     }
-    .unity{
-      p{
-        display: none;
+  }
+  .unity {
+    p {
+      font-weight: map-get($font-weight, semibold);
+    }
+    input {
+      font-size: 30px;
+      padding: 5px;
+      text-align: center;
+    }
+    #fahrenheitInput::-webkit-input-placeholder,
+    #celsiusInput::-webkit-input-placeholder {
+      color: white;
+    }
+  }
+  .convertion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    #btn {
+      padding: 15px 40px;
+      border: none;
+      border-radius: 30px;
+      background-color: $color-primary;
+      color: $color-button;
+      font-size: 16px;
+      font-weight: map-get($font-weight, semibold);
+      letter-spacing: 1px;
+      &:hover {
+        background-color: $bg-hover;
+      }
+    }
+    .messages {
+      height: 20vh;
+      #errorMsg {
+        color: $color-error;
+        font-weight: map-get($font-weight, bold);
+      }
+      #convertionToCelsius,
+      #convertionToFahrenheit,
+      #errorMsg {
       }
     }
   }
 }
 
-#fahrenheitInput::-webkit-input-placeholder, #celsiusInput::-webkit-input-placeholder{
-  color: white;
-}
-
-.unity{
-  p {
-    font-weight: map-get($font-weight, semibold);
-  }
-}
-
-input{
-  font-size: 30px;
-  margin: 10px;
-  padding: 5px;
-  text-align: center;
-}
-
-#btn{
-  margin-top: 50px;
-  padding: 15px 40px;
-  border: none;
-  border-radius: 30px;
-  background-color: $color-primary;
-  color: $color-button;
-  font-size: 16px;
-  font-weight: map-get($font-weight, semibold);
-  letter-spacing: 1px;
-  &:hover {
-    background-color: $bg-hover;
-  }
-}
-
-#errorMsg {
-  color: $color-error;
-  font-weight: map-get($font-weight, bold);
-}
-
-#convertionToCelsius, #convertionToFahrenheit, #errorMsg{
-  margin-top: 44px;
-}
-
-footer{
-  position: fixed;
-  bottom: 0;
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: $bg-footer;
-  padding: 20px 0;
-  width: 100%;
   a {
     font-weight: map-get($font-weight, semibold);
     color: $color-primary;
