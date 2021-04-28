@@ -4,6 +4,7 @@ body {
   font-family: 'Asap', sans-serif;
   margin: 0;
   padding: 0;
+  height: 100vh;
 }
 
 #container {
@@ -14,12 +15,14 @@ body {
   text-align: center;
   height: 90vh;
   width: 100vw;
+  background-color: #fff;
   .title {
     height: 33.333vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
   }
+
   #unities {
     display: flex;
     height: 33.333vh;
@@ -28,6 +31,7 @@ body {
     gap: 15px;
     @media (max-width: 992px) {
       flex-direction: column;
+
       #fahrenheitInput::-webkit-input-placeholder,
       #celsiusInput::-webkit-input-placeholder {
         color: $color-placeholder;
